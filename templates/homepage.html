@@ -1,0 +1,23 @@
+{% extends "layout.html" %} {% block content %}
+
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename = 'homepage.js') }}"
+></script>
+<script
+  type="text/javascript"
+  src="{{ url_for('static', filename = 'layout.js') }}"
+></script>
+
+<script>
+  let data = {{data|tojson}}
+  console.log(data)
+</script>
+<!-- <div id="homepage-title">Bring it on !</div> -->
+<div class = "container">
+  <div class="row">
+    <div class="col-md-12" id="homepage"></div>
+  </div>
+</div>
+
+{% endblock %}

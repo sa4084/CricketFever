@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'layout.js') }}"></script>
+
+<script>
+    let data = {{data|tojson}} 
+    let id = {{id|tojson}} 
+    console.log(data)
+</script>
+<!-- <form action="" method="post"> -->
+    <br>
+    <div id="success"> Successfully created new item <a id = "aimp" href="">view here</a> </div>
+    <div></div>
+    <input type="text" placeholder="name" id="name">
+    <span class="ch-name"></span>
+    <div></div>
+    <input type="text" placeholder="ranking" id="ranking">
+    <span class="ch-ranking"></span>
+
+    <div></div>
+    <input type="text" placeholder="Image Url" name="link" id="image">
+    <span class="ch-image"></span>
+    
+    <div></div>
+    <input type="text" placeholder="runs" id="runs">
+    <span class="ch-runs"></span>
+
+    <div></div>
+    <textarea placeholder="Desciption" id="summary" cols="113" rows="5"></textarea>
+    <span class="ch-summary"></span>
+
+    <div></div>
+    <input type="text" placeholder="year" id="year">
+    <span class="ch-year"></span>
+
+    <div></div>
+    <input type="text" placeholder="teams" id="teams">
+    <span class="ch-teams"></span>
+
+    <div></div>
+    <input type="text" placeholder="affiliations" id="affiliations">
+    <span class="ch-affiliations"></span>
+    <div></div>
+    
+    <input type="text" placeholder="Otherteammates" id="Otherteammates">
+    <span class="ch-otherteammates"></span>
+    <br>
+    <br>
+    <button class="btn btn-primary" id="addnewentry" >Add new Entry</button>
+<!-- </form> -->
+
+{% endblock %}

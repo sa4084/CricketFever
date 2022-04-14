@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'layout.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'edit.js') }}"></script>
+
+<script>     
+    let data = {{data|tojson}} 
+    let id = {{id|tojson}} 
+    console.log(data) 
+</script>
+<!-- <form action="" method="post"> -->
+    <div class="edit-container">
+        <div id="dialog">Are you sure about this ?</div>
+    </div>
+<!-- </form> -->
+
+{% endblock %}

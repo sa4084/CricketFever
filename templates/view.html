@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'view.js') }}"></script>
+<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}" />
+    
+
+<script>
+    let data = {{data|tojson}} 
+    let id = {{id|tojson}}
+    console.log(id)
+
+</script>
+<div class="container" id = "profile">
+</div>
+
+{% endblock %}
+
